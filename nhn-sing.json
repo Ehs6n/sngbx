@@ -1,0 +1,1050 @@
+{
+  "remarks": "Nahan Frag - Best Ping",
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "hosts": {
+      "geosite:category-ads-all": [
+        "127.0.0.1"
+      ],
+      "geosite:category-ads-ir": [
+        "127.0.0.1"
+      ]
+    },
+    "servers": [
+      "https://94.140.14.14/dns-query"
+    ],
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "http-in"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
+      },
+      "tag": "dns-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "tag": "prox_1",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.146.173.52",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_2",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.47.55",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_3",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "192.200.160.12",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_4",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "94.242.60.130",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_5",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.46.251",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_6",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "162.159.140.220",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_7",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "10.202.8.146",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_8",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "researchgate.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_9",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.97.183",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_10",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "173.245.59.81",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_11",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "pinimg.com",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_12",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_13",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.biography.com",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_14",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "zula.ir",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_15",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "151.101.64.155",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_16",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "162.159.152.152",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "prox_17",
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "dialerProxy": "fragment",
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "serverName": "Ggjd.digikala.lat"
+        },
+        "wsSettings": {
+          "headers": {},
+          "heartbeatPeriod": 0,
+          "host": "private.digikala.lat",
+          "path": "/"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "reject"
+      },
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.213.167.178",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c1f6fe11-7446-4663-9630-09aa1a3af46a",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {},
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    },
+
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "AsIs",
+        "fragment": {
+          "packets": "1-2",
+          "length": "1-5",
+          "interval": "3-5"
+        }
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tcpKeepAliveIdle": 100,
+          "tcpMptcp": true,
+          "penetrate": true
+        }
+      }
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "8.8.8.8"
+        ],
+        "outboundTag": "direct",
+        "port": "53",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:category-ads-all",
+          "geosite:category-ads-ir"
+        ],
+        "outboundTag": "block",
+        "type": "field"
+      },
+      {
+        "balancerTag": "all",
+        "type": "field",
+        "network": "tcp,udp"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "all",
+        "selector": [
+          "prox"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        }
+      }
+    ]
+  },
+  "observatory": {
+    "probeInterval": "30s",
+    "probeURL": "https://api.github.com/_private/browser/stats",
+    "subjectSelector": [
+      "prox"
+    ],
+    "EnableConcurrency": true
+  },
+  "stats": {}
+}
